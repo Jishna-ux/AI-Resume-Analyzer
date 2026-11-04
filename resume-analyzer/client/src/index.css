@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #effaf8;
+  --color-brand-100: #d3f3ee;
+  --color-brand-600: #0f8a7e;
+  --color-brand-700: #0d6f66;
+  --color-brand-800: #0f5a53;
+  --color-ink: #0f172a;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
